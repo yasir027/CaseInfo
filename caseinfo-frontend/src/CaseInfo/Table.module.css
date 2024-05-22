@@ -1,0 +1,34 @@
+.customTable {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  height: 200px;
+  padding: 50px;
+}
+
+.customTh {
+  border: 1px solid black;
+  font-size: 10px;
+  padding: 10px;
+}
+
+.customTr {
+  border: 1.5px solid black;
+  cursor: pointer; /* Add cursor pointer to indicate clickable rows */
+  transition: background-color 0.3s ease; /* Add transition for smooth animation */
+}
+
+.customTr:hover {
+  background-color: #a4a4a4; /* Highlight row on hover */
+  transform: scale(1.01); /* Optional: slightly scale up the row on hover */
+
+}
+
+.customTd {
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  height: 5px;
+  padding: 3px;
+  margin: 0;
+  font-size:12px;
+}

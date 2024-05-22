@@ -1,0 +1,110 @@
+*{
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  align-items: right;
+  
+  
+}
+
+.Container{
+  display: flex;
+  background-color: black;
+  border-radius:0px;
+  padding-left:20px;
+
+}
+.body{
+  justify-content: center;
+  padding: 0px 5px 0px 25px;
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
+  justify-items:center;
+  align-content:center;
+  
+  overflow-x:none;
+  display:flex;
+  justify-content:space-around;
+  
+}
+
+.formContainer{
+  position: relative;
+  width: 300vw;
+  height: 95vh;
+  margin:10px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0,0,0,.2);
+  display:inline-flex;
+  flex-direction:column;
+  gap: 10px;
+  
+  overflow-y:scroll;  
+  border: 1px solid #d14900;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #d14900;
+ 
+  
+  
+}
+.row{
+  align-self:cen;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  column-gap:10px;
+}
+
+.col{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  gap: 1px;
+  width:100%
+}
+label{
+  font-size:18px;
+  padding:15px 0px 2px 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+input{
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid #000;
+  border-radius:10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding:10px;
+  margin-bottom:20px;
+}
+.formHeader h1{
+  margin:0;
+  align-items: left;
+  padding-bottom: 1%;
+}
+
+.button1, .button{
+  background-color:black;
+  color:white;
+  padding:5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align:center;
+}
+
+.button1{
+  background-color:darkred;
+}
+
+.button1, .button:hover{
+  background-color: #b71a09;
+  cursor:pointer;
+}
+
+.club{
+display:flex;
+  gap: 20px;
+}

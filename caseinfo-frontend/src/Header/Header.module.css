@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 97vw;  /* Ensures the body takes full width */
+    height: 100vh; /* Ensures the body takes full height, optional based on layout */
+  width:100%;
+    box-sizing: border-box; /* Changes how the width and padding are calculated */
+}
+/* Header.module.css */
+.headerComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Background color set to black */
+  padding: 10px 15px; /* Reduced vertical padding */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+/* Reduce the size and margins around elements */
+.titleImage {
+  height: 40px; /* Reduced height for image */
+  margin-bottom: 20px; /* Reduced space below the logo */
+  align-self: center; /* Keep the logo centered */
+}
+
+.headerComponentInner {
+  display: flex;
+ gap:10px;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Padding adjusted if necessary */
+}
+
+.navBarDefault {
+  flex-grow: 1; /* Allow the navbar to take up available space */
+}
+
+.loginButton {
+  padding: 8px 20px; /* Slightly reduced padding */
+  background-color: #ffffff; /* Correct the background comment */
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: 'Abhaya Libre';
+  cursor: pointer;
+  margin-left: 1px; /* Minimal space between navbar and login button */
+  &:hover {
+   color: red /* Underline color */
+  }
+    /* Active state simulates the button being pressed */
+    &:active {
+      transform: scale(0.95); /* Scales down the button to give a "pressed" effect */
+
+  }
+
+}
