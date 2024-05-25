@@ -8,6 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -15,10 +16,18 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
+
+      // Check if the user's email is verified
+      if (!user.emailVerified) {
+        setError('Please verify your email before logging in.');
+        return; // Prevent further execution
+      }
+
       console.log('User logged in:', user);
       navigate('/');
     } catch (error) {
       console.error('Error signing in:', error);
+      setError(error.message);
     }
   };
 
@@ -50,6 +59,7 @@ const Login = () => {
                 required
               />
             </div>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
             <button type="submit" onClick={onLogin}>
               Login
             </button>
