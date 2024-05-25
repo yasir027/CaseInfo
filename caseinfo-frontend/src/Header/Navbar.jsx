@@ -1,66 +1,28 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
-  const navigate = useNavigate();
-
-  const handleNavigation = (path) => () => {
-    navigate(path);
-  };
-
-  const getClassName = (path) => {
-    return window.location.pathname === path
-      ? `${styles.navButton} ${styles.active}`
-      : styles.navButton;
-  };
-
+const Navbar = ({ user, handleSignOut }) => {
   return (
     <div className={styles.navBarDefault}>
       <div className={styles.frame}>
-        <div className={styles.dropdown}>
-          <button
-            onClick={handleNavigation("/home")}
-            className={getClassName("/home")}
-          >
-            HOME
+        <Link to="/recycle-bin" className={styles.navButton}>
+          Recycle Bin
+        </Link>
+        <Link to="/reports" className={styles.navButton}>
+          Reports
+        </Link>
+        <Link to="/user-privileges" className={styles.navButton}>
+          User Privileges
+        </Link>
+        <Link to="/profile" className={styles.navButton}>
+          Profile Settings
+        </Link>
+        {user && (
+          <button onClick={handleSignOut} className={styles.navButton}>
+            Logout
           </button>
-          <div className={styles.dropdownContent}>
-            <button onClick={handleNavigation("/about")}>ABOUT</button>
-            <button onClick={handleNavigation("/contact")}>CONTACT</button>
-            <button onClick={handleNavigation("/help")}>HELP</button>
-          </div>
-        </div>
-        <button onClick={handleNavigation("/index")} className={getClassName("/index")}>
-          INDEX
-        </button>
-        <button
-          onClick={handleNavigation("/case-finder")}
-          className={getClassName("/case-finder")}
-        >
-          CASE FINDER
-        </button>
-        <button onClick={handleNavigation("/statutes")} className={getClassName("/statutes")}>
-          STATUTES
-        </button>
-        <button onClick={handleNavigation("/articles")} className={getClassName("/articles")}>
-          ARTICLES
-        </button>
-        <button
-          onClick={handleNavigation("/judges-profile")}
-          className={getClassName("/judges-profile")}
-        >
-          JUDGES PROFILE
-        </button>
-        <button onClick={handleNavigation("/pad")} className={getClassName("/pad")}>
-          PAD
-        </button>
-        <button
-          onClick={handleNavigation("/caseinfo")}
-          className={getClassName("/caseinfo")}
-        >
-          CASE INFO
-        </button>
+        )}
       </div>
     </div>
   );
