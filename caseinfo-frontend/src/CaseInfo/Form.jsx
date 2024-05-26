@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Styles from "./Form.module.css";
-import Dash from "./Dash";
 import Table from "./Table";
 
 function Form() {
@@ -216,7 +215,6 @@ function Form() {
 
   return (
     <div className={Styles.Container}>
-      <Dash />
       <div className={Styles.formContainer}>
         <div className={Styles.formHeader}>
           <h1>
