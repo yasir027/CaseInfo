@@ -80,7 +80,7 @@ function Form() {
       const response = await axios.delete(`http://localhost:3000/api/deleteCaseInfo/${caseInfoId}`);
   
       if (response.status === 200) {
-        alert("Case deleted successfully.");
+        alert("Case moved to recycle bin successfully.");
         // Handle successful deletion
         setFormData(initialFormData);
         fetchCaseData();
@@ -218,7 +218,7 @@ function Form() {
       <div className={Styles.formContainer}>
         <div className={Styles.formHeader}>
           <h1>
-            <i>Case Info</i>
+            <i>ALD Case Info</i>
           </h1>
         </div>
         <div className={Styles.formBody}>
