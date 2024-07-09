@@ -1,0 +1,86 @@
+/* Popup.module.css */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: black; /* Change background color to black */
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    color: white; /* Set text color to white */
+    font-family: 'Abhaya Libre', serif; /* Set font-family to Abhaya Libre */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: white; /* Set close button text color to white */
+  }
+  
+  .login-form,
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form input,
+  .signup-form input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(159, 158, 158); /* Set input background color to grey */
+    color: rgb(0, 0, 0); /* Set input text color to white */
+    border: none;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  /* Apply hover styles when input is focused */
+  .login-form input:focus,
+  .signup-form input:focus {
+    background-color: rgb(255, 255, 255); /* Darken input background on focus */
+  }
+  
+  .login-form button,
+  .signup-form button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white; /* Set button background color to white */
+    color: black; /* Set button text color to black */
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 10px;
+  }
+  
+  .login-form button:hover,
+  .signup-form button:hover {
+    background-color: rgb(232, 232, 232); /* Lighten button background on hover */
+    color: black; /* Ensure text color remains black on hover */
+  }
+  
+  .login-form p,
+  .signup-form p {
+    color: #c5e1a5; /* Set paragraph text color to white */
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

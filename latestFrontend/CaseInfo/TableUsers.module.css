@@ -1,0 +1,40 @@
+.customTable {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+}
+
+.customTh {
+  border: 1px solid black;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.customTr {
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.customTr.selected {
+  background-color: #c5e1a5; /* Active color */
+  transform: scale(1.01);
+}
+
+.customTr.selected.done {
+  background-color: transparent; /* Remove active color */
+}
+
+.customTr:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.01);
+}
+
+.customTd {
+  border: 1px solid black;
+  padding: 8px;
+  font-size: 12px;
+}
