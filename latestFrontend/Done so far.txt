@@ -1,0 +1,12 @@
+Case info changes done
+
+- enter removed 
+- drop downs added
+- user authentication done
+- honorable in print added
+- date search filter added
+- search by remarks added back
+
+
+Pending
+- citation column bada karna hai..
