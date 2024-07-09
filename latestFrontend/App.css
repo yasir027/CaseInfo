@@ -1,0 +1,10 @@
+/* App.css */
+.blur-container.blur {
+  filter: blur(5px);
+}
+
+.Content {
+  flex: 1;
+}
+
+ 
